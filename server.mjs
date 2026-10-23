@@ -1,4 +1,5 @@
 import express from 'express'
+import { existsSync } from 'node:fs'
 import cors from 'cors'
 import { createServer as createViteServer } from 'vite'
 import path from 'path'
@@ -235,29 +236,44 @@ async function start() {
     }
   })
 
-  const vite = await createViteServer({
-    root: __dirname,
-    server: { middlewareMode: true, allowedHosts: true },
-    appType: 'custom',
-  })
-  app.use(vite.middlewares)
+  const distDir = path.join(__dirname, 'dist')
+  const distIndex = path.join(distDir, 'index.html')
+  if (process.env.NODE_ENV === 'production' && !existsSync(distIndex)) {
+    const { build } = await import('vite')
+    await build({ root: __dirname })
+  }
 
-  app.use(async (req, res, next) => {
-    if (req.method !== 'GET' || req.path.startsWith('/api') || req.path.includes('.')) {
-      return next()
-    }
-    try {
-      const fs = await import('fs/promises')
-      const template = await vite.transformIndexHtml(
-        req.originalUrl,
-        await fs.readFile(path.join(__dirname, 'index.html'), 'utf-8'),
-      )
-      res.status(200).set({ 'Content-Type': 'text/html' }).end(template)
-    } catch (e) {
-      vite.ssrFixStacktrace(e)
-      next(e)
-    }
-  })
+  if (process.env.NODE_ENV === 'production' && existsSync(distIndex)) {
+    app.use(express.static(distDir))
+    app.use((req, res, next) => {
+      if (req.method !== 'GET' || req.path.startsWith('/api')) return next()
+      res.sendFile(distIndex)
+    })
+  } else {
+    const vite = await createViteServer({
+      root: __dirname,
+      server: { middlewareMode: true, allowedHosts: true },
+      appType: 'custom',
+    })
+    app.use(vite.middlewares)
+
+    app.use(async (req, res, next) => {
+      if (req.method !== 'GET' || req.path.startsWith('/api') || req.path.includes('.')) {
+        return next()
+      }
+      try {
+        const fs = await import('fs/promises')
+        const template = await vite.transformIndexHtml(
+          req.originalUrl,
+          await fs.readFile(path.join(__dirname, 'index.html'), 'utf-8'),
+        )
+        res.status(200).set({ 'Content-Type': 'text/html' }).end(template)
+      } catch (e) {
+        vite.ssrFixStacktrace(e)
+        next(e)
+      }
+    })
+  }
 
   const port = Number(process.env.PORT) || 5174
   app.listen(port, () => {

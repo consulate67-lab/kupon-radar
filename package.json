@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node server.mjs",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
+    "postinstall": "node scripts/render-build.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
