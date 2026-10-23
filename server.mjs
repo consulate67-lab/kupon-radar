@@ -237,7 +237,7 @@ async function start() {
 
   const vite = await createViteServer({
     root: __dirname,
-    server: { middlewareMode: true },
+    server: { middlewareMode: true, allowedHosts: true },
     appType: 'custom',
   })
   app.use(vite.middlewares)
