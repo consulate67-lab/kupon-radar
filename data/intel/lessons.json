@@ -1,0 +1,127 @@
+{
+  "updatedAt": "2026-10-22T10:08:35.800Z",
+  "learned": [
+    {
+      "id": "coupon-stoke-nords-2026-10-20",
+      "at": "2026-10-20T20:00:00.000Z",
+      "tip": "stoke-nords-u21-msx-trap-2026-10-20",
+      "detail": "Kupon 22:32 · 3'lü · son ayak Stoke U21–Nordsjælland U21 MS X @1.51. HT 0-0 → FT 0-2. Tutacak alternatifler: Alt 2.5 (2 gol), KG Yok (tek taraf). Stoke yakın formda HT 0-0→0-2 (Gladbach II) tekrarı.",
+      "coupon": {
+        "ok": [
+          "Everton U21–Gladbach II Alt 2.5 @1.82 → 1-1",
+          "Southampton U21–Juventus U21 MS X @1.80 → 1-1"
+        ],
+        "fail": "Stoke U21–Nordsjælland U21 MS X @1.51 → 0-2"
+      }
+    },
+    {
+      "id": "draw-while-leading-3329072",
+      "tip": "no-draw-when-leading-late",
+      "detail": "61' 1-0 → MS X engellendi",
+      "at": "2026-10-20T20:03:33.142Z"
+    },
+    {
+      "id": "draw-while-leading-3329608",
+      "tip": "no-draw-when-leading-late",
+      "detail": "61' 1-0 → MS X engellendi",
+      "at": "2026-10-20T20:05:17.232Z"
+    },
+    {
+      "id": "draw-while-leading-3329066",
+      "tip": "no-draw-when-leading-late",
+      "detail": "68' 1-0 → MS X engellendi",
+      "at": "2026-10-20T20:10:22.863Z"
+    },
+    {
+      "id": "draw-while-leading-3224000",
+      "tip": "no-draw-when-leading-late",
+      "detail": "67' 1-0 → MS X engellendi",
+      "at": "2026-10-20T20:11:18.252Z"
+    },
+    {
+      "id": "draw-while-leading-3315388",
+      "tip": "no-draw-when-leading-late",
+      "detail": "68' 1-0 → MS X engellendi",
+      "at": "2026-10-20T20:11:34.745Z"
+    },
+    {
+      "id": "draw-while-leading-3224077",
+      "tip": "no-draw-when-leading-late",
+      "detail": "80' 2-3 → MS X engellendi",
+      "at": "2026-10-20T20:22:06.923Z"
+    },
+    {
+      "id": "draw-while-leading-3329080",
+      "tip": "no-draw-when-leading-late",
+      "detail": "66' 1-0 → MS X engellendi",
+      "at": "2026-10-20T20:23:34.985Z"
+    },
+    {
+      "id": "draw-while-leading-3329071",
+      "tip": "no-draw-when-leading-late",
+      "detail": "81' 1-0 → MS X engellendi",
+      "at": "2026-10-20T20:24:00.465Z"
+    },
+    {
+      "id": "draw-while-leading-3329079",
+      "tip": "no-draw-when-leading-late",
+      "detail": "78' 0-1 → MS X engellendi",
+      "at": "2026-10-20T20:25:03.082Z"
+    },
+    {
+      "id": "draw-while-leading-3224058",
+      "tip": "no-draw-when-leading-late",
+      "detail": "78' 2-1 → MS X engellendi",
+      "at": "2026-10-20T20:41:49.035Z"
+    },
+    {
+      "id": "draw-while-leading-3333514",
+      "tip": "no-draw-when-leading-late",
+      "detail": "73' 1-0 → MS X engellendi",
+      "at": "2026-10-21T00:48:08.010Z"
+    },
+    {
+      "id": "draw-while-leading-3333516",
+      "tip": "no-draw-when-leading-late",
+      "detail": "84' 1-0 → MS X engellendi",
+      "at": "2026-10-21T03:15:07.278Z"
+    },
+    {
+      "id": "draw-while-leading-3225769",
+      "tip": "no-draw-when-leading-late",
+      "detail": "65' 1-0 → MS X engellendi",
+      "at": "2026-10-21T05:24:56.555Z"
+    },
+    {
+      "id": "draw-while-leading-3329018",
+      "tip": "no-draw-when-leading-late",
+      "detail": "78' 1-0 → MS X engellendi",
+      "at": "2026-10-21T11:41:29.604Z"
+    },
+    {
+      "id": "draw-while-leading-3329007",
+      "tip": "no-draw-when-leading-late",
+      "detail": "83' 0-1 → MS X engellendi",
+      "at": "2026-10-21T11:43:50.422Z"
+    },
+    {
+      "id": "draw-while-leading-3326145",
+      "tip": "no-draw-when-leading-late",
+      "detail": "86' 1-2 → MS X engellendi",
+      "at": "2026-10-21T12:26:31.515Z"
+    },
+    {
+      "id": "draw-while-leading-3337456",
+      "tip": "no-draw-when-leading-late",
+      "detail": "62' 2-1 → MS X engellendi",
+      "at": "2026-10-22T09:54:46.940Z"
+    },
+    {
+      "id": "draw-while-leading-3245942",
+      "tip": "no-draw-when-leading-late",
+      "detail": "73' 0-1 → MS X engellendi",
+      "at": "2026-10-22T10:08:35.800Z"
+    }
+  ],
+  "note": "Çelişen piyasa/skor durumlarında brain.mjs buraya ders yazar."
+}
